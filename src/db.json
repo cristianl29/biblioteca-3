@@ -1,0 +1,25 @@
+{
+  "spots": [
+    {
+      "id": 1,
+      "code": "A-01",
+      "occupied": false,
+      "vehiclePlate": "",
+      "ownerName": ""
+    },
+    {
+      "id": 2,
+      "code": "A-02",
+      "occupied": true,
+      "vehiclePlate": "ABC123",
+      "ownerName": "Juan Perez"
+    },
+    {
+      "id": 3,
+      "code": "B-01",
+      "occupied": false,
+      "vehiclePlate": "",
+      "ownerName": ""
+    }
+  ]
+}

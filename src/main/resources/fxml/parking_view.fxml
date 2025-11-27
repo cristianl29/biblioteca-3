@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.parqueadero.ui.ParkingController">
+  <center>
+    <VBox spacing="8" padding="10">
+      <TableView fx:id="table" prefHeight="300">
+        <columns>
+          <TableColumn fx:id="colCode" text="Código" prefWidth="150"/>
+          <TableColumn fx:id="colOccupied" text="Ocupado" prefWidth="100"/>
+        </columns>
+      </TableView>
+
+      <HBox spacing="8">
+        <VBox spacing="6">
+          <Label text="Código"/>
+          <TextField fx:id="txtCode" prefWidth="200"/>
+          <Label text="Placa"/>
+          <TextField fx:id="txtPlate"/>
+          <Label text="Propietario"/>
+          <TextField fx:id="txtOwner"/>
+        </VBox>
+
+        <VBox spacing="6" alignment="TOP_CENTER">
+          <Button fx:id="btnCreate" text="Crear" onAction="#createSpot" prefWidth="120"/>
+          <Button fx:id="btnUpdate" text="Actualizar" onAction="#updateSpot" prefWidth="120" disable="true"/>
+          <Button fx:id="btnDelete" text="Eliminar" onAction="#deleteSpot" prefWidth="120" disable="true"/>
+        </VBox>
+      </HBox>
+
+      <Label fx:id="lblStatus" text="Estado" />
+    </VBox>
+  </center>
+</BorderPane>

@@ -1,0 +1,24 @@
+# Ejemplo de flujo de git y comandos ejecutables
+
+# Inicializar repo
+git init
+git add .
+git commit -m "chore: estructura proyecto inicial (Maven, JavaFX, recursos)"
+
+# Branch para cliente API
+git checkout -b feat/api-client
+git add src/main/java/com/parqueadero/service/ApiClient.java
+git commit -m "feat(api): agregar ApiClient para consumo de API REST"
+
+# Branch para UI
+git checkout -b feat/ui
+git add src/main/java/com/parqueadero/ui/ParkingController.java src/main/resources/fxml/parking_view.fxml
+git commit -m "feat(ui): agregar interfaz JavaFX y controlador con CRUD"
+
+# Merge a main
+git checkout main
+git merge --no-ff feat/api-client -m "merge: feat/api-client"
+git merge --no-ff feat/ui -m "merge: feat/ui"
+
+# Tag para entrega
+git tag -a v1.0 -m "Entrega rúbrica 3 - parking-desktop"
